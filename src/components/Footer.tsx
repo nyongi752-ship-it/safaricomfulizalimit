@@ -1,4 +1,4 @@
-import { Zap, Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -7,10 +7,8 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8 pb-10 border-b border-white/15">
           <div className="md:col-span-2">
             <div className="flex items-center gap-2.5 font-display font-bold text-lg text-white mb-4">
-              <span className="w-8 h-8 rounded-lg bg-white/20 flex items-center justify-center text-white">
-                <Zap className="w-4.5 h-4.5" strokeWidth={2.5} />
-              </span>
-              Fuliza<span className="text-white">Boost</span>
+              <img src="/brand-mark.svg" alt="" className="w-8 h-8 rounded-lg" />
+              Safaricom Fuliza Limit
             </div>
             <p className="text-sm leading-relaxed max-w-sm text-white/70">
               Instantly increase your fuliza limit with a one-time fee. No subscriptions, no hidden charges.

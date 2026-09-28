@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Menu, X, Zap } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -35,10 +35,8 @@ export default function Navbar() {
     >
       <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         <a href="#" className="flex items-center gap-2.5 font-display font-bold text-lg text-white">
-          <span className="w-8 h-8 rounded-lg bg-brand-600 flex items-center justify-center text-white">
-            <Zap className="w-4.5 h-4.5" strokeWidth={2.5} />
-          </span>
-          Fuliza<span className="text-white">Limit</span>
+          <img src="/brand-mark.svg" alt="" className="w-8 h-8 rounded-lg" />
+          <span>Safaricom Fuliza Limit</span>
         </a>
 
         <div className="hidden md:flex items-center gap-1">
