@@ -51,7 +51,7 @@ export default function Hero() {
           <div className="relative pt-4 sm:pt-0">
             <div
               key={liveActivity.id}
-              className="absolute -top-2 sm:-top-5 right-3 z-20 w-[calc(100%-1.5rem)] max-w-[300px] bg-white rounded-2xl shadow-lift border border-brand-100 overflow-hidden animate-fade-up"
+              className="absolute bottom-4 left-3 sm:bottom-5 sm:left-5 z-20 w-[calc(100%-1.5rem)] max-w-[300px] bg-white rounded-2xl shadow-lift border border-brand-100 overflow-hidden animate-fade-up"
               aria-live="polite"
             >
               <div className="bg-brand-600 text-white px-4 py-2.5 flex items-center gap-2 text-[11px] font-bold uppercase tracking-wide">
