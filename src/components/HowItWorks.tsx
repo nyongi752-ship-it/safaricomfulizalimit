@@ -31,7 +31,7 @@ export default function HowItWorks() {
             How It Works
           </h2>
           <p className="text-slate-600 mt-3 max-w-xl mx-auto text-sm sm:text-base">
-            Three simple steps to unlock a higher overdraft limit. No paperwork, no waiting days for approval.
+            Three simple steps to unlock a higher fuliza limit. No paperwork, no waiting days for approval.
           </p>
         </div>
 

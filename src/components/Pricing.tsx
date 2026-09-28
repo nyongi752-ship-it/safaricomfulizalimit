@@ -312,7 +312,7 @@ export default function Pricing() {
                 <button onClick={handleApplicationSubmit} className="mt-6 w-full py-3.5 rounded-xl bg-brand-600 text-white font-semibold hover:bg-brand-700 transition-colors shadow-brand focus-ring flex items-center justify-center gap-2">
                   Check Eligibility
                 </button>
-                <p className="mt-3 text-center text-xs text-slate-400">This site does not request a National ID or M-Pesa PIN.</p>
+                <p className="mt-3 text-center text-xs text-slate-400">This site does not request your M-Pesa PIN.</p>
               </>
             )}
 
@@ -360,7 +360,7 @@ export default function Pricing() {
                     <AlertTriangle className="w-7 h-7 text-amber-500" />
                   </div>
                   <h3 id="checkout-title" className="font-display font-bold text-2xl text-slate-900">Confirm Your Selection</h3>
-                  <p className="text-slate-600 mt-2 text-sm">Please confirm you want to boost your limit to the selected target.</p>
+                  <p className="text-slate-600 mt-2 text-sm">Please confirm you want to increase your limit to the selected target.</p>
                 </div>
 
                 <div className="mt-6 rounded-xl bg-slate-50 border border-slate-200 p-5 space-y-3">

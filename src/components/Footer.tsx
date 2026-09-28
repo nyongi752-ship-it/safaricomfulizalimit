@@ -10,10 +10,10 @@ export default function Footer() {
               <span className="w-8 h-8 rounded-lg bg-white/20 flex items-center justify-center text-white">
                 <Zap className="w-4.5 h-4.5" strokeWidth={2.5} />
               </span>
-              Limit<span className="text-white">Boost</span>
+              Fuliza<span className="text-white">Boost</span>
             </div>
             <p className="text-sm leading-relaxed max-w-sm text-white/70">
-              Instantly increase your mobile money overdraft limit with a one-time fee. No subscriptions, no hidden charges.
+              Instantly increase your fuliza limit with a one-time fee. No subscriptions, no hidden charges.
             </p>
           </div>
 
@@ -30,8 +30,8 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-semibold text-sm mb-3.5">Contact</h4>
             <ul className="space-y-2.5 text-sm">
-              <li className="flex items-center gap-2"><Mail className="w-4 h-4 text-white/60 flex-shrink-0" /> support@limitboost.demo</li>
-              <li className="flex items-center gap-2"><Phone className="w-4 h-4 text-white/60 flex-shrink-0" /> 0700 000 000</li>
+              <li className="flex items-center gap-2"><Mail className="w-4 h-4 text-white/60 flex-shrink-0" /> support@fulizalimit.com</li>
+              <li className="flex items-center gap-2"><Phone className="w-4 h-4 text-white/60 flex-shrink-0" /> 0720 000 000</li>
               <li className="flex items-center gap-2"><MapPin className="w-4 h-4 text-white/60 flex-shrink-0" /> Nairobi, Kenya</li>
             </ul>
           </div>
@@ -39,7 +39,7 @@ export default function Footer() {
 
         <div className="pt-6 space-y-4">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/70">
-            <p>&copy; 2026 LimitBoost. For educational purposes only.</p>
+            <p>&copy; 2026 safaricomfulizaboost. All rights reserved.</p>
             <div className="flex gap-6">
               <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
               <a href="#" className="hover:text-white transition-colors">Terms of Service</a>

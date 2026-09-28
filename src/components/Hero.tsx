@@ -24,7 +24,7 @@ export default function Hero() {
             Secure &amp; Verified
           </div>
           <h1 className="font-display font-extrabold text-4xl sm:text-5xl text-slate-900 leading-[1.08] tracking-tight">
-            Boost Your limit
+            Boost Your Fuliza limit
             <br />
             Limit <span className="text-brand-600">Instantly</span>
           </h1>

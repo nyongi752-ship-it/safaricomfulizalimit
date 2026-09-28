@@ -38,7 +38,7 @@ export default function Navbar() {
           <span className="w-8 h-8 rounded-lg bg-brand-600 flex items-center justify-center text-white">
             <Zap className="w-4.5 h-4.5" strokeWidth={2.5} />
           </span>
-          Limit<span className="text-white">Boost</span>
+          Fuliza<span className="text-white">Limit</span>
         </a>
 
         <div className="hidden md:flex items-center gap-1">
@@ -57,7 +57,7 @@ export default function Navbar() {
             href="#pricing"
             className="ml-2 px-5 py-2 rounded-lg bg-white text-[#008f8f] text-sm font-semibold hover:bg-white/90 transition-colors shadow-soft"
           >
-            Boost Now
+            Increase Fuliza Limit Now
           </a>
         </div>
 
@@ -90,7 +90,7 @@ export default function Navbar() {
             onClick={() => setOpen(false)}
             className="block text-center mt-2 px-5 py-2.5 rounded-lg bg-white text-[#008f8f] text-sm font-semibold"
           >
-            Boost Now
+            Increase Fuliza Limit Now
           </a>
         </div>
       )}
