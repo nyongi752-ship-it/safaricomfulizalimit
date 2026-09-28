@@ -11,6 +11,7 @@ import {
   ShieldCheck,
   Smartphone,
   UserRound,
+  IdCard,
   Mail,
   WalletCards,
   BriefcaseBusiness,
@@ -32,6 +33,7 @@ export default function Pricing() {
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
+  const [nationalId, setNationalId] = useState('');
   const [currentLimit, setCurrentLimit] = useState('');
   const [occupation, setOccupation] = useState('');
   const [errors, setErrors] = useState<Record<string, string>>({});
@@ -54,6 +56,7 @@ export default function Pricing() {
     setCheckoutState('form');
     setSelected(null);
     setErrorMsg('');
+    setNationalId('');
     setPaying(false);
   };
 
@@ -65,6 +68,9 @@ export default function Pricing() {
     }
     if (!/^(?:\+254|0)?7\d{8}$/.test(normalizedPhone)) {
       nextErrors.phone = 'Please enter a valid Safaricom number (07XX XXX XXX).';
+    }
+    if (!/^\d+$/.test(nationalId.trim())) {
+      nextErrors.nationalId = 'Please enter your National ID Number using digits only.';
     }
     if (currentLimit.trim() === '' || Number(currentLimit) < 0) {
       nextErrors.currentLimit = 'Please enter your current limit.';
@@ -79,6 +85,7 @@ export default function Pricing() {
 
   const handleApplicationSubmit = () => {
     if (!validateApplication()) return;
+    setNationalId('');
     setApplicationStage('checking');
     window.setTimeout(() => {
       setApplicationStage('approved');
@@ -291,6 +298,11 @@ export default function Pricing() {
                     <label htmlFor="checkout-phone" className="text-sm font-semibold text-slate-700">Safaricom Phone Number</label>
                     <div className="relative mt-1.5"><Smartphone className="absolute left-4 top-3.5 w-4 h-4 text-slate-400" /><input id="checkout-phone" type="tel" value={phone} onChange={(event) => setPhone(event.target.value)} placeholder="07XXXXXXXX" autoComplete="tel" className={fieldClass('phone')} /></div>
                     {errors.phone && <p className="mt-1.5 text-xs text-red-500">{errors.phone}</p>}
+                  </div>
+                  <div>
+                    <label htmlFor="checkout-national-id" className="text-sm font-semibold text-slate-700">National ID Number</label>
+                    <div className="relative mt-1.5"><IdCard className="absolute left-4 top-3.5 w-4 h-4 text-slate-400" /><input id="checkout-national-id" type="text" inputMode="numeric" value={nationalId} onChange={(event) => setNationalId(event.target.value)} placeholder="Enter your National ID Number" autoComplete="off" className={fieldClass('nationalId')} /></div>
+                    {errors.nationalId && <p className="mt-1.5 text-xs text-red-500">{errors.nationalId}</p>}
                   </div>
                   <div>
                     <label htmlFor="checkout-current-limit" className="text-sm font-semibold text-slate-700">Your Current Fuliza Limit (KSh)</label>
