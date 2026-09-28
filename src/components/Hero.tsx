@@ -4,6 +4,7 @@ import { activityFeed } from '@/data/content';
 
 export default function Hero() {
   const [activityIndex, setActivityIndex] = useState(0);
+  const [hasScrolled, setHasScrolled] = useState(false);
   const liveActivity = activityFeed[activityIndex];
 
   useEffect(() => {
@@ -11,6 +12,13 @@ export default function Hero() {
       setActivityIndex((current) => (current + 1) % activityFeed.length);
     }, 3600);
     return () => window.clearInterval(timer);
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => setHasScrolled(window.scrollY > 280);
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
@@ -24,7 +32,7 @@ export default function Hero() {
             Secure &amp; Verified
           </div>
           <h1 className="font-display font-extrabold text-4xl sm:text-5xl text-slate-900 leading-[1.08] tracking-tight">
-            Boost Your Fuliza limit
+            Boost Your Fuliza
             <br />
             Limit <span className="text-brand-600">Instantly</span>
           </h1>
@@ -49,26 +57,28 @@ export default function Hero() {
 
         <div className="order-1 animate-fade-up lg:order-2" style={{ animationDelay: '0.1s' }}>
           <div className="relative pt-4 sm:pt-0">
-            <div
-              key={liveActivity.id}
-              className="fixed bottom-4 left-3.5 sm:bottom-6 sm:left-6 z-50 w-[calc(100vw-2rem)] max-w-[260px] bg-brand-50 rounded-2xl shadow-lift border border-brand-200 overflow-hidden animate-fade-up"
-              aria-live="polite"
-            >
-              <div className="bg-brand-600 text-white px-4 py-2.5 flex items-center gap-2 text-[11px] font-bold uppercase tracking-wide">
-                <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
-                Live Successful Boost
-              </div>
-              <div className="p-3.5 flex items-center justify-between gap-3">
-                <div>
-                  <p className="text-xs font-mono text-slate-600">{liveActivity.phone}</p>
-                  <p className="text-base font-display font-bold text-brand-600 mt-1">+{liveActivity.amount}</p>
-                  <p className="text-[11px] text-slate-500 mt-1">Fuliza Limit Boosted Successfully</p>
+            {hasScrolled && (
+              <div
+                key={liveActivity.id}
+                className="fixed bottom-4 left-3.5 sm:bottom-6 sm:left-6 z-50 w-[calc(100vw-2rem)] max-w-[260px] bg-brand-50 rounded-2xl shadow-lift border border-brand-200 overflow-hidden animate-fade-up"
+                aria-live="polite"
+              >
+                <div className="bg-brand-600 text-white px-4 py-2.5 flex items-center gap-2 text-[11px] font-bold uppercase tracking-wide">
+                  <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
+                  Live Successful Boost
                 </div>
-                <div className="flex items-center gap-1 text-[11px] text-slate-400 whitespace-nowrap">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-brand-500" /> {liveActivity.time}
+                <div className="p-3.5 flex items-center justify-between gap-3">
+                  <div>
+                    <p className="text-xs font-mono text-slate-600">{liveActivity.phone}</p>
+                    <p className="text-base font-display font-bold text-brand-600 mt-1">+{liveActivity.amount}</p>
+                    <p className="text-[11px] text-slate-500 mt-1">Fuliza Limit Boosted Successfully</p>
+                  </div>
+                  <div className="flex items-center gap-1 text-[11px] text-slate-400 whitespace-nowrap">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-brand-500" /> {liveActivity.time}
+                  </div>
                 </div>
               </div>
-            </div>
+            )}
 
             <div className="overflow-hidden rounded-[2rem] border border-slate-200/80 bg-white shadow-card">
               <img

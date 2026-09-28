@@ -54,27 +54,6 @@ export const testimonials: Testimonial[] = [
     text: 'Mwanzo nilikuwa na doubt, lakini kila kitu ni transparent. Hakuna hidden charges, limit ika-show immediately. Noma!',
     rating: 5,
   },
-  {
-    id: 't4',
-    name: 'David L.',
-    location: 'Eldoret',
-    text: 'Limit yangu ili-move kutoka 2k hadi 70k chini ya 10 mins. Kama unatumia mobile money daily, hii ni game changer.',
-    rating: 5,
-  },
-  {
-    id: 't5',
-    name: 'Mercy A.',
-    location: 'Kisumu',
-    text: 'Process ni clean sana. Business limit yangu sasa ni boosted. Nimeshukuru sana, hii service ni safi.',
-    rating: 5,
-  },
-  {
-    id: 't6',
-    name: 'Kevin M.',
-    location: 'Thika',
-    text: 'One-time fee tu, hakuna subscription — ndio ili-niconvince. Boosted mara moja na limit imekaa. Chunguza!',
-    rating: 4,
-  },
 ];
 
 export interface FAQItem {

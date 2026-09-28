@@ -5,7 +5,7 @@ import { ChevronDown } from 'lucide-react';
 
 export default function FAQ() {
   const ref = useReveal<HTMLElement>();
-  const [open, setOpen] = useState<string | null>(faqs[0].id);
+  const [open, setOpen] = useState<string | null>(null);
 
   return (
     <section id="faq" ref={ref} className="py-20 bg-slate-50/50">
