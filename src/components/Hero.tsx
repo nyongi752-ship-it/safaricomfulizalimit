@@ -18,7 +18,7 @@ export default function Hero() {
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-brand-50/60 via-white to-white" />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-        <div className="animate-fade-up">
+        <div className="order-2 animate-fade-up lg:order-1">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-50 border border-brand-200/60 text-brand-700 text-xs font-medium mb-5">
             <ShieldCheck className="w-3.5 h-3.5" />
             Secure &amp; Verified
@@ -47,7 +47,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="animate-fade-up" style={{ animationDelay: '0.1s' }}>
+        <div className="order-1 animate-fade-up lg:order-2" style={{ animationDelay: '0.1s' }}>
           <div className="relative pt-4 sm:pt-0">
             <div
               key={liveActivity.id}
