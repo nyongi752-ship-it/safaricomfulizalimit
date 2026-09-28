@@ -83,16 +83,6 @@ export const faqs: FAQItem[] = [
     question: 'What do I need to qualify?',
     answer: 'An active mobile money account with a good repayment history. The better your history, the higher the limit you can unlock.',
   },
-  {
-    id: 'f5',
-    question: 'Can I boost more than once?',
-    answer: 'Yes. As you continue using mobile money and repaying on time, you become eligible for higher tiers. You can boost again after your current limit is fully utilized and repaid.',
-  },
-  {
-    id: 'f6',
-    question: 'Is this a real service?',
-    answer: 'No. This is a fictional, educational demo built for learning web development. It is not affiliated with any real mobile money provider, and no actual transactions take place.',
-  },
 ];
 
 export interface ActivityItem {
